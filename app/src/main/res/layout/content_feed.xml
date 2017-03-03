@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize">
 
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -16,15 +17,110 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp">
 
-        <TextView
-            android:id="@+id/car_loc_text"
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Car Location"
-            android:textAlignment="center"
-            android:textSize="24sp" />
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/car_loc_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Car Location"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <include layout="@layout/activity_maps"
+                android:layout_width="336dp"
+                android:layout_height="85dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
 
     </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        card_view:cardCornerRadius="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:id="@+id/camera">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/view_camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Car Cameras"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:text="Front Facing cam"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:layout_height="50dp"
+                        android:layout_width="match_parent"
+                        card_view:srcCompat="@drawable/car_park_front"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="8dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:text="Rear Facing Cam"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView4"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:layout_height="50dp"
+                        android:layout_width="match_parent"
+                        card_view:srcCompat="@drawable/car_park_rear"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="8dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
 
     <android.support.v7.widget.CardView
         android:id="@+id/software_update"
@@ -50,8 +146,7 @@
                 android:textAlignment="center"
                 android:textSize="24sp"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="12dp" />
+                android:layout_alignParentStart="true" />
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -59,26 +154,35 @@
                 android:layout_height="match_parent">
 
                 <Button
-                    android:text="Info"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/button3"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="57dp"
-                    android:id="@+id/button4"
-                    android:layout_weight="1"
-                    android:layout_gravity="center_vertical" />
-
-                <Button
                     android:text="Update"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="45dp"
+                    android:id="@+id/button4"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp" />
+
+                <Button
+                    android:text="Later"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button7"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp" />
+
+                <Button
+                    android:text="Info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:id="@+id/button3"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginBottom="23dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp" />
             </LinearLayout>
 
         </LinearLayout>
@@ -87,7 +191,6 @@
 
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/view_camera"
         android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="128dp"
@@ -95,7 +198,8 @@
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp">
+        android:layout_marginRight="16dp"
+        android:id="@+id/media">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -110,8 +214,7 @@
                 android:textAlignment="center"
                 android:textSize="24sp"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="15dp" />
+                android:layout_alignParentStart="true" />
 
             <TextView
                 android:id="@+id/media_song"
@@ -135,7 +238,8 @@
                     android:layout_below="@+id/media_song"
                     android:layout_alignParentStart="true"
                     android:layout_marginStart="42dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical" />
 
                 <ImageView
                     android:layout_height="50dp"
@@ -143,7 +247,8 @@
                     card_view:srcCompat="@drawable/ic_pause_black_24dp"
                     android:layout_below="@+id/media_song"
                     android:layout_centerHorizontal="true"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical" />
 
                 <ImageView
                     android:layout_height="50dp"
@@ -152,7 +257,8 @@
                     android:layout_below="@+id/media_song"
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="45dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical" />
 
             </LinearLayout>
 
