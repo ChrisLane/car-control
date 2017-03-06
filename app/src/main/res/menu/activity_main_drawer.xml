@@ -12,9 +12,11 @@
                 android:title="@string/nav_media"/>
         <item
                 android:id="@+id/nav_ready_car"
+                android:icon="@drawable/ic_menu_ready_car"
                 android:title="@string/nav_ready_car"/>
         <item
                 android:id="@+id/nav_driving_score"
+                android:icon="@drawable/ic_menu_driving_score"
                 android:title="@string/nav_driving_score"/>
         <item
                 android:id="@+id/nav_settings"
