@@ -26,14 +26,14 @@ public class MainActivity extends AppCompatActivity
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         System.out.println("child count: "+tabLayout.getChildCount());
-        TabItem tabFeed = (TabItem) tabLayout.findViewById(R.id.tabHome);
-        tabFeed.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-            }
-        });
+        TabItem tabFeed = (TabItem) findViewById(R.id.tabHome);
+//        tabFeed.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//
+//            }
+//        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
