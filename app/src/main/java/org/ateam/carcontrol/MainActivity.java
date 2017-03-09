@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void rcButtonClicked(View v){
-        Intent intent = new Intent(this, RcControl.class);
+        Intent intent = new Intent(this, RemoteControlActivity.class);
         startActivity(intent);
     }
 }

@@ -68,7 +68,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="org.ateam.carcontrol.MainActivity" />
         </activity>
-        <activity android:name=".RcControl" />
+        <activity android:name=".RemoteControlActivity" />
     </application>
 
 </manifest>
