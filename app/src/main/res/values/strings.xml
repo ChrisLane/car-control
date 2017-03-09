@@ -27,4 +27,21 @@
     <string name="nav_social">Social</string>
     <string name="nav_share">Share</string>
     <string name="title_activity_maps">Map</string>
+
+    <string name="song1">Believer - Imagine Dragons</string>
+    <string name="song2">Talk Dirty - Jason Derulo</string>
+    <string name="song3">Turn Down for What - DJ Snake</string>
+    <string name="song4">Shape of You - Ed Sheeran</string>
+    <string name="song5">Starboy - The Weeknd</string>
+    <string name="song6">One Dance - Drake</string>
+    <string name="song7">Help! - The Beatles</string>
+    <string name="song8">Thunderstruck - AC/DC</string>
+    <string name="song9">Cold - Maroon 5</string>
+    <string name="song10">Green Light - Lorde</string>
+    <string name="song11">Solo Dance - Martin Jensen</string>
+    <string name="song12">Wonderland - Taylor Swift</string>
+    <string name="song13">Tunnel Vision - Kodak Black</string>
+    <string name="song14">Water Under The Bridge - Adele</string>
+    <string name="song15">My Way - Calvin Harris</string>
+    <string name="song16">CoCo - O.T. Genasis</string>
 </resources>

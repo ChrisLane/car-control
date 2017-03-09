@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_navigation) {
             startActivity(new Intent(this, MapsActivity.class));
         } else if (id == R.id.nav_media) {
-
+            startActivity(new Intent(this, MusicMainMenuActivity.class));
         } else if (id == R.id.nav_ready_car) {
 
         } else if (id == R.id.nav_settings) {
