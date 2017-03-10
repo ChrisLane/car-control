@@ -101,4 +101,9 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public void rcButtonClicked(View v){
+        Intent intent = new Intent(this, RemoteControlActivity.class);
+        startActivity(intent);
+    }
 }
